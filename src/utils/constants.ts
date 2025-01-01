@@ -26,6 +26,12 @@ export const NavbarLinks: LinkProps[] = [
     title: "Career",
     path: "/career",
     isActive: true
+  },
+  {
+    name: "Letter",
+    title: "letter",
+    path: "/letter",
+    isActive: true
   }
 ];
 
