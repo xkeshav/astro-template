@@ -1,0 +1,25 @@
+---
+import "@/assets/styles/page.css";
+import BaseLayout from "@/layouts/Base";
+import TitleLayout from "@/layouts/TitleLayout";
+import { getCollection } from "astro:content";
+
+const blogs = await getCollection("blogs");
+---
+
+<BaseLayout meta={{ title: "Blogs" }}>
+  <div class="container__blog">
+    <TitleLayout title="Blogs" />
+    <div class="grid grid-cols-1 gap-2 sm:grid-cols-3 lg:grid-cols-4">
+      {
+        blogs.map((item) => (
+          <div>
+            <a href={`blog/${item.id}`}>
+              <span>{item.id}</span>
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>
