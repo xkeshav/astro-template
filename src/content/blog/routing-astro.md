@@ -1,10 +1,10 @@
 ---
 title: "How routing works in Astro ?"
 description: "The full guide on routing in astro framework . The easy and simple guide to understand and implement routing "
-date: "31/12/2024"
+publishDate: "12 December 2024"
 ---
 
-# **Adding a New Route in Astro.js**
+## Adding a New Route in Astro.js
 
 Astro uses a **file-based routing system**, where the file structure in the `src/pages` directory determines the routes.
 

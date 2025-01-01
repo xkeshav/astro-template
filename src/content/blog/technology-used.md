@@ -1,10 +1,10 @@
 ---
 title: "The tech stack that we preferred"
 description: "The tech stack that we work with and why we choose it ? "
-date: "24/12/2024"
+publishDate: "24 December 2024"
 ---
 
-# **Project Technology Stack Documentation**
+## **Project Technology Stack Documentation**
 
 ## **Frontend**
 

@@ -1,10 +1,10 @@
 ---
 title: "The new era of state management with Zustand ?"
 description: "The simple and easy to understand all about Zustand the new and simple way to manage the state in client side. "
-date: "28/12/2024"
+publishDate: "12 December 2024"
 ---
 
-# Zustand Documentation
+## Zustand Documentation
 
 ## What is Zustand?
 

@@ -1,10 +1,10 @@
 ---
 title: "The style guide the must know to start the code"
 description: "The full guid on file structure , css naming convention , tailwind usage and , css classes naming convention . "
-date: "26/12/2024"
+publishDate: "26 December 2024"
 ---
 
-# **Style Guide Documentation**
+## Style Guide Documentation
 
 This document outlines the style guide we follow to maintain consistency and readability in our codebase. These principles apply to both CSS and JavaScript/TypeScript components.
 
@@ -14,7 +14,7 @@ This document outlines the style guide we follow to maintain consistency and rea
 
 - Use a clear and consistent folder structure.
 - Place CSS files for components inside the `assets/styles` folder, named according to the component (e.g., `result-products.css` for `ResultProducts` component).
-- Keep reusable styles in a `global.css` file.
+- Keep reusable styles in a `globals.css` file.
 
 ---
 
