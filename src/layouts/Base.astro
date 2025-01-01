@@ -18,9 +18,11 @@ const {
   <body>
     <ThemeProvider />
     <Header />
-    <main id="main" class="main scroller">
-      <div><Menu /></div>
-      <slot><p>This is my fallback content, if there is no child passed into slot</p></slot>
+    <main id="main" class="main">
+      <div class="sidebar"><Menu /></div>
+      <div class="content">
+        <slot><p>This is my fallback content, if there is no child passed into slot</p></slot>
+      </div>
     </main>
     <Footer />
   </body>
