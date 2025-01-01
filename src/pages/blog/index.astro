@@ -13,11 +13,11 @@ const blogs = await getCollection("blogs");
     <div class="grid grid-cols-1 gap-2 sm:grid-cols-3 lg:grid-cols-4">
       {
         blogs.map((item) => (
-          <div>
             <a href={`blog/${item.id}`}>
-              <span>{item.id}</span>
+            <div class="h-52 rounded-lg border p-2">
+                <span>{item.id}</span>
+            </div>
             </a>
-          </div>
         ))
       }
     </div>

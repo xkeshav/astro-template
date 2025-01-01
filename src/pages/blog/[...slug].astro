@@ -1,0 +1,29 @@
+---
+import "@/assets/styles/page.css";
+import BaseLayout from "@/layouts/Base";
+import TitleLayout from "@/layouts/TitleLayout";
+import { type CollectionEntry, getCollection, render } from "astro:content";
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blogs");
+  return posts.map((blog) => ({
+    params: { slug: blog.id },
+    props: blog
+  }));
+}
+type Props = CollectionEntry<"blogs">;
+
+const blog = Astro.props;
+const { Content } = await render(blog);
+if (!Content) {
+  throw new Error(`Content could not be rendered for blog: ${blog.id}`);
+}
+---
+
+<BaseLayout meta={{ title: `blog : ${blog.id}` }}>
+  <div class="container__blog">
+    <TitleLayout title="Blogs" />
+    <Content />
+  </div>
+</BaseLayout>
