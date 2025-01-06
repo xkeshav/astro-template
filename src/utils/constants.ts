@@ -1,4 +1,4 @@
-import type { LinkProps } from "@/models";
+import type { LinkProps } from "@/types";
 
 export const APP_NAME = "Template";
 
