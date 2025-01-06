@@ -1,54 +1,106 @@
-# Astro Starter Kit: Basics
+# Template to Start Astro + React
 
-```sh
-npm create astro@latest -- --template basics
-```
+This is a codebase for to Start Project in Astro + React .
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## The template contain
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- Shadcn for component
+- tailwind for styling
+- Zustand for state management
+- TypeScript for type safety
+- Zod for form type safe form validation
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+### How To Start
+
+### pre-requisite
+
+- Node v 18 or higher
+- open vscode and open startup.vscode-workspace file
 
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
 
 ```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+.
+├── astro.config.mjs
+├── astro-i18next.config.mjs
+├── CHANGELOG.MD
+├── components.json
+├── docs
+│   ├── README.md
+│   └── state-management.md
+├── jsconfig.json
+├── LICENSE
+├── package.json
+├── package-lock.json
+├── postcss.config.js
+├── public
+│   ├── 192x192.png
+│   ├── 512x512.png
+│   ├── android-chrome-192x192.png
+│   ├── android-chrome-512x512.png
+│   ├── apple-touch-icon.png
+│   ├── favicon.svg
+│   ├── logo-white.svg
+│   ├── manifest.webmanifest
+│   ├── profile-placeholder.jpg
+│   ├── robots.txt
+│   ├── sitemap-index.html
+├── README.md
+├── src
+│   ├── assets
+│   ├── components
+│   ├── content
+│   ├── env.d.ts
+│   ├── hooks
+│   ├── icons
+│   ├── layouts
+│   ├── libs
+│   ├── locales
+│   ├── mocks
+│   ├── models
+│   ├── pages
+│   ├── postcss.config.cjs
+│   ├── site.config.ts
+│   ├── types.ts
+│   └── utils
+├── tailwind.config.ts
+├── todo.md
+├── tsconfig.eslint.json
+├── tsconfig.json
+└── tz-client.code-workspace
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+and src
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Installation
 
-Any static assets, like images, can be placed in the `public/` directory.
+```bash
+npm install
+```
 
-## 🧞 Commands
+### Development
 
-All commands are run from the root of the project, from a terminal:
+To start the development server, run:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+```bash
+npm run dev
+```
 
-## 👀 Want to learn more?
+The server will start on `http://localhost:4321`.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### Deployment
+
+run in local
+
+```sh
+npm run lint
+npm run build
+```
+
+and then check with
+
+```sh
+npm run preview
+```
