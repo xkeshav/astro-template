@@ -65,5 +65,7 @@
     "titleBar.inactiveBackground": "#e05bf799",
     "titleBar.inactiveForeground": "#15202b99"
   },
-  "peacock.color": "#e05bf7"
+  "peacock.color": "#e05bf7",
+  "css.format.enable": true,
+  "css.lint.unknownAtRules": "ignore"
 }

@@ -225,9 +225,6 @@
       translate: 0 calc(max(0, var(--ty, 0)) * 1px);
     }
 
-    /* [popover]:popover-open {
-      translate: 0 calc(var(--ty, 0) * 1px);
-    } */
 
     html {
       --size: 45px;
@@ -244,10 +241,6 @@
       transition-duration: var(--timing);
       transition-timing-function: var(--ease);
       transform-origin: 50% 0;
-    }
-
-    [data-dragging="true"] body {
-      transition-duration: 0s;
     }
 
     :root:has(:popover-open) body {

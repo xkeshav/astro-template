@@ -7,6 +7,7 @@ export const collections = {
     loader: glob({ pattern: "**/*.md", base: "./src/content/blog" }),
     schema: z.object({
       title: z.string().max(60),
+      slug: z.string().optional(),
       publishDate: z
         .string()
         .or(z.date())

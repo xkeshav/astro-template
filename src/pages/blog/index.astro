@@ -3,6 +3,7 @@ import "@/assets/styles/page.css";
 import BaseLayout from "@/layouts/Base";
 import TitleLayout from "@/layouts/TitleLayout";
 import { getCollection } from "astro:content";
+import BlogCard from "./BlogCard.astro";
 
 const blogs = await getCollection("blogs");
 ---
@@ -12,12 +13,15 @@ const blogs = await getCollection("blogs");
     <TitleLayout title="Blogs" />
     <div class="grid grid-cols-1 gap-2 sm:grid-cols-3 lg:grid-cols-4">
       {
-        blogs.map((item) => (
-            <a href={`blog/${item.id}`}>
-            <div class="h-52 rounded-lg border p-2">
-                <span>{item.id}</span>
-            </div>
-            </a>
+        blogs.map((post: any) => (
+          <BlogCard
+            url={`/blog/${post.id}`}
+            title={post.data.title}
+            description={post.data.description}
+            image={post.data.image}
+            author={post.data.author}
+            date={post.data.date?.toLocaleDateString()}
+          />
         ))
       }
     </div>

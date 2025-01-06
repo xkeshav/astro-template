@@ -6,24 +6,27 @@ import { type CollectionEntry, getCollection, render } from "astro:content";
 export const prerender = true;
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blogs");
-  return posts.map((blog) => ({
-    params: { slug: blog.id },
-    props: blog
+  const blogs = await getCollection("blogs");
+  return blogs.map((entry) => ({
+    params: { slug: entry.id },
+    props: entry
   }));
 }
+
 type Props = CollectionEntry<"blogs">;
 
 const blog = Astro.props;
+const { title } = blog.data;
+
 const { Content } = await render(blog);
 if (!Content) {
   throw new Error(`Content could not be rendered for blog: ${blog.id}`);
 }
 ---
 
-<BaseLayout meta={{ title: `blog : ${blog.id}` }}>
+<BaseLayout meta={{ title }}>
   <div class="container__blog">
-    <TitleLayout title="Blogs" />
+    <TitleLayout title={title} />
     <Content />
   </div>
 </BaseLayout>
