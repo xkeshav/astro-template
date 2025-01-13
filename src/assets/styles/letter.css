@@ -1,5 +1,5 @@
 .controls {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -74,11 +74,9 @@ button:hover {
 }
 
 .bg-pattern1 {
-  background-image: repeating-linear-gradient(
-    45deg,
-    rgba(0, 0, 0, 0.1) 0px,
-    rgba(0, 0, 0, 0.1) 2px,
-    transparent 2px,
-    transparent 4px
-  );
+  background-image: repeating-linear-gradient(45deg,
+      rgba(0, 0, 0, 0.1) 0px,
+      rgba(0, 0, 0, 0.1) 2px,
+      transparent 2px,
+      transparent 4px);
 }
