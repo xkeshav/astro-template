@@ -1,9 +1,9 @@
 ---
 name: Feature request
 about: Suggest a feature for this project
-title: "❇️ TZC-24000X:"
+title: "❇️ TZC-24000X: "
 labels: enhancement
-assignees: recursivezero
+assignees: xkeshav
 ---
 
 **Is your feature request related to a problem? Please describe.**

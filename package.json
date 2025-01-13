@@ -1,9 +1,9 @@
 {
   "name": "astro-template",
-  "version": "1.3.0",
+  "version": "1.5.0",
   "description": "front end starter in Astro with React codebase",
   "homepage": "https://parixan.xyz",
-  "displayName": "template",
+  "displayName": "astro template",
   "license": "MIT",
   "publisher": "recursivezero",
   "private": true,
@@ -14,11 +14,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/recursivezero/template.git"
+    "url": "git+https://github.com/xkeshav/astro-template.git"
   },
   "bugs": {
-    "url": "https://github.com/recursivezero/template/issues",
-    "email": "recursivezero@outlook.com"
+    "url": "https://github.com/xkeshav/astro-template/issues",
+    "email": "xkeshav@hmail.com"
   },
   "funding": {
     "type": "individual",
@@ -32,7 +32,9 @@
   ],
   "keywords": [
     "client",
-    "startup"
+    "astro",
+    "react",
+    "boilerplate"
   ],
   "scripts": {
     "dev": "astro dev",
@@ -42,8 +44,10 @@
     "astro": "astro",
     "check": "astro check",
     "lint": "prettier -w --cache . && prettier -w --cache **/*.astro",
-    "clean": "rm -rf dist rm -rf build",
-    "nuke": "rm -rf node_modules && rm package-lock.json && npm run clean"
+    "clean": "rm -rf dist & rm -rf build",
+    "nuke": "shx rm -rf node_modules && rm package-lock.json && npm run clean",
+    "clear": "shx rm -rf dist & shx rm -rf build",
+    "postinstall": "sh ./setup-hooks.sh"
   },
   "dependencies": {
     "@astrojs/check": "0.9.4",
@@ -83,6 +87,7 @@
     "postcss-import": "16.1.0",
     "prettier": "3.1.0",
     "prettier-plugin-astro": "0.14.1",
-    "prettier-plugin-tailwindcss": "0.6.8"
+    "prettier-plugin-tailwindcss": "0.6.8",
+    "shx": "0.3.4"
   }
 }
