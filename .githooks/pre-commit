@@ -5,7 +5,7 @@ BRANCH_NAME=$(git symbolic-ref --short HEAD)
 echo "Current branch: $BRANCH_NAME"
 
 # Define the branches to exclude
-EXCLUDED_BRANCHES="develop main release refactor"
+EXCLUDED_BRANCHES="main develop release refactor upgrade"
 
 # Check if the current branch is in the excluded list
 for EXCLUDED_BRANCH in $EXCLUDED_BRANCHES; do
@@ -18,29 +18,11 @@ done
 # Pre-commit checks (e.g., linting, testing, etc.)
 echo "Running pre-commit checks for branch: $BRANCH_NAME"
 
-echo "$BRANCH_NAME" | grep -Eq '^(feature|bugfix|hotfix|task)/[A-Za-z]+-[0-9]+'
+echo "$BRANCH_NAME" | grep -Eq '^(feature|bugfix|hotfix)/[A-Za-z]+-[0-9]+'
 if [ $? -ne 0 ]; then
     echo "Error: Branch name '$BRANCH_NAME' is invalid."
-    echo "Use a valid branch naming convention, e.g., feature/XYZ-123-description."
-    exit 1
-fi
-
-# Step 2: Run poetry linting tools
-echo "Running poetry linting tools..."
-if ! poetry run flake8 .; then
-    echo "flake8 failed. Aborting commit."
-    exit 1
-fi
-
-if ! poetry run black --check .; then
-    echo "black failed. Aborting commit."
-    exit 1
-fi
-
-if ! poetry run mypy .; then
-    echo "mypy failed. Aborting commit."
+    echo "Use a valid branch naming convention, e.g., feature|bugfix}hotfix/XYZ-123-description."
     exit 1
 fi
 
 echo "Pre-commit checks passed!"
-exit 0

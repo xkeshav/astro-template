@@ -38,7 +38,7 @@
   ],
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
+    "start": "NODE_ENV=development astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",

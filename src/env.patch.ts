@@ -3,11 +3,11 @@ import { expand } from "dotenv-expand";
 import path from "node:path";
 import { z } from "zod";
 
-//console.log(process.cwd(), import.meta.url);
+console.log("running environment is==>", process.env.NODE_ENV, import.meta.url);
 
 expand(
   config({
-    path: path.resolve(process.cwd(), process.env.NODE_ENV === "test" ? ".env.test" : ".env")
+    path: path.resolve(process.cwd(), process.env.NODE_ENV === "development" ? ".env.local" : ".env")
   })
 );
 

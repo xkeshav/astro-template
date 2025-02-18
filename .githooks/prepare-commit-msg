@@ -3,7 +3,7 @@
 # This script prepends the branch name to the commit message
 # Skip certain branches (configurable)
 if [ -z "$BRANCHES_TO_SKIP" ]; then
-    BRANCHES_TO_SKIP="master develop release refactor"
+    BRANCHES_TO_SKIP="master develop release"
 fi
 
 BRANCH_NAME=$(git symbolic-ref --short HEAD)
